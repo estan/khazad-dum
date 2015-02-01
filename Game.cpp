@@ -260,7 +260,7 @@ void Game::drop(std::string itemId)
 void Game::eat(std::string itemId)
 {
     if (!player()->environment()->enemies().empty()) {
-        printl("You must defeat all enemies eating anything!");
+        printl("You must defeat all enemies before eating anything!");
         return;
     }
 
