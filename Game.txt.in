@@ -1,0 +1,626 @@
+# Intro message
+
+"================================================
+       Welcome to the Game of Khazad-dûm!
+================================================
+You're trapped in the mines of Khazad-dûm. Your
+mission is to slay the evil Balrog guarding the
+exit in the northwestern parts of the mines.
+
+In your journey you may come across friendly
+Elves, Wizards and Dwarves that will help you
+along the way. Orcs and Goblins are evil and
+will try to stop you.
+================================================
+
+Press [Enter] to begin your adventure!"
+
+# Help message
+
+"Available actions:
+    hit <enemy>       Hit an enemy
+    talk <actor>      Talk to an actor
+    go <direction>    Go in a direction
+    look              Look around you
+    look <direction>  Look in a direction
+    look <item>       Look at an item
+    look <actor>      Look at an actor
+    pickup <item>     Pick up an item
+    drop <item>       Drop an item
+    eat <item>        Eat an item in your inventory
+    status            Check your status and inventory
+    help              Show this help message
+    quit              Quit the game"
+
+19 # Number of environments
+
+Room
+    darkCave
+    "darkly lite cave with wet walls"
+    0 # numItems
+    0 # numActors
+    0 # numEnemies
+
+Room
+    openSpace
+    "large and chilly open space"
+    0 # numItems
+    1 # numActors
+        Elf
+            tallElf
+            "tall elf"
+            "The elf is tall and has a solemn look on his face."
+            "To the west lies danger, but perhaps there's something in the north to help you"
+    0 # numEnemies
+
+Room
+    threewayLedge
+    "three-way ledge, surrounded by hot air"
+    0 # numItems
+    0 # numActors
+    2 # numEnemies
+    Orc
+        bigOrc
+        "big orc"
+        "The orc has a foul look and is extraordinarily big. He smells."
+        10   # hp
+        10   # damage
+        0.6  # hitRate
+    Goblin
+        uglyGoblin
+        "ugly goblin"
+        "You have never seen such an ugly goblin. He is hideous."
+        5    # hp
+        5    # damage
+        0.5  # hitRate
+
+Room
+    silverRefinery
+    "old silver refinery"
+    1 # numItems
+    Item
+        silverKey
+        "silver key"
+        "The key is shining like the moonlight and has inscriptions in old dwarf tounge."
+        0 # damage
+        0 # protection
+        0 # nutrition
+    0 # numActors
+    0 # numEnemies
+
+Room
+    hallway
+    "short hallway lined with pillars"
+    0 # numItems
+    1 # numActors
+    Wizard
+        oldWizard
+        "old wizard"
+        "The wizard looks tired and his hat is wrinkly."
+        "Glittering points that downward thrust, Sparkling spears that never rust."
+        "icicle"
+        Item
+            steelDagger
+            "steel dagger"
+            "The dagger is made of ordinary steel. It should inflict 10 HP damage."
+            10 # damage
+            0  # protection
+            0  # nutrition
+    0 # numEnemies
+
+Room
+    forge
+    "long since abandoned dwarf forge"
+    1 # numItems
+    Item
+        sword
+        "shining sword"
+        "The sword looks excellent. It's hardly been used. It should inflict 20 HP damage."
+        20 # damage
+        0  # protection
+        0  # nutrition
+    0 # numActors
+    0 # numEnemies
+
+Room
+    workshop
+    "abandoned dwarf workshop"
+    1 # numItems
+    Item
+        smallLembas
+        "small lembas bread"
+        "The lembas bread is small, but highly nutritious. You should gain 20 HP from eating it."
+        0  # damage
+        0  # protection
+        20 # nutrition
+    0 # numActors
+    0 # numEnemies
+
+Room
+    twowayLedge
+    "two-way ledge spanning an underground river"
+    0 # numItems
+    0 # numActors
+    2 # numEnemies
+    Orc
+        shortOrc
+        "short orc"
+        "The orc is quite small, but looks like he still packs a punch."
+        10   # hp
+        10   # damage
+        0.6  # hitRate
+    Goblin
+        sinisterGoblin
+        "sinister goblin"
+        "The goblin looks like he came straight out of Barad-dûr."
+        5    # hp
+        5    # damage
+        0.5  # hitRate
+
+Room
+    cookingPlace
+    "dwarf cooking place"
+    1 # numItems
+    Item
+        roastedBoar
+        "roasted boar"
+        "The boar looks saturated with fat. It should give you a good 15 HP!"
+        0  # damage
+        0  # protection
+        15 # nutrition
+    0 # numActors
+    0 # numEnemies
+
+Room
+    tomb
+    "old dwarf tomb with still air"
+    0 # numItems
+    0 # numActors
+    3 # numEnemies
+    Orc
+        giantOrc
+        "giant orc"
+        "The orc is so big he stands almost twice as tall as his ugly companion."
+        10   # hp
+        10   # damage
+        0.5  # hitRate
+    Orc
+        uglyOrc
+        "ugly orc"
+        "This particular orc seems to come from the bottom of the orc gene pool."
+        10   # hp
+        10   # damage
+        0.6  # hitRate
+    Orc
+        urukHai
+        "genuine Uruk-hai"
+        "It really is one of the Uruks that have found its way into Moria."
+        10   # hp
+        15   # damage
+        0.7  # hitRate
+
+Room
+    shed
+    "small shed smelling of death"
+    1 # numItems
+    Item
+        shield
+        "broad shield"
+        "The shield is made of iron with copper inlays. Should give you 50% protection."
+        0 # damage
+        2 # protection
+        0 # nutrition
+    0 # numActors
+    0 # numEnemies
+
+Room
+    mithrilRefinery
+    "mithril refinery with a big forge oven"
+    1 # numItems
+    Item
+        mithrilShirt
+        "mithril shirt"
+        "The shirt is glimmering like the stars. Should give you 75% protection."
+        0 # damage
+        4 # protection
+        0 # nutrition
+    0 # numActors
+    0 # numEnemies
+
+Room
+    holdingRoom
+    "old prisoner holding room"
+    0 # numItems
+    0 # numActors
+    0 # numEnemies
+
+Room
+    treasureKeep
+    "dwarf treasure keep"
+    1 # numItems
+    Item
+        goldKey
+        "gold key"
+        "The key is solid gold, with inscriptions in old dwarf tounge. You can't read it."
+        0 # damage
+        0 # protection
+        0 # nutrition
+    0 # numActors
+    0 # numEnemies
+
+Room
+    platform
+    "trembling stone platform"
+    0 # numItems
+    0 # numActors
+    3 # numEnemies
+    Orc
+        mountainOrc
+        "mountain orc"
+        "The orc is hairy and has a foul grin on his face."
+        10   # hp
+        10   # damage
+        0.5  # hitRate
+    Orc
+        cruelOrc
+        "cruel looking orc"
+        "The orc is dressed in rags and has a big scythe blade."
+        10   # hp
+        10   # damage
+        0.6  # hitRate
+    Goblin
+        smallGoblin
+        "small goblin"
+        "The goblin is small and looks a little afraid of the bigger orcs."
+        5    # hp
+        5    # damage
+        0.6  # hitRate
+
+Swamp
+    swamp
+    "underground swamp"
+    1 # numItems
+    Item
+        bigLembas
+        "big lembas bread"
+        "The lembas bread is quit big, and highly nutritious. You should gain 40 HP from eating it."
+        0  # damage
+        0  # protection
+        40 # nutrition
+    0 # numActors
+    0 # numEnemies
+    5 # damage
+
+Room
+    bigLedge
+    "big ledge overlooking a bottomless shaft"
+    0 # numItems
+    1 # numActors
+        Dwarf
+            dwarf
+            "greedy dwarf"
+            "The dwarf looks interested in trading, if you have something to trade."
+            3 # numItems
+            Item
+                axe
+                "broad dwarf axe"
+                "The axe looks heavy, and is very sharp. Should inflict 30 HP damage."
+                30 # damage
+                0  # protection
+                0  # nutrition
+            Item
+                grilledChicken
+                "grilled chicken"
+                "The chicken smells delicious. Should give at least 30 HP if eaten."
+                0  # damage
+                0  # protection
+                30 # nutrition
+            Item
+                potato
+                "small potato"
+                "The potato is slightly mouldy. Should only give 5 HP, if you even want to eat it."
+                0 # damage
+                0 # protection
+                5 # nutrition
+    0 # numEnemies
+
+Room
+    bridge
+    "bridge of Khazad-dûm"
+    0 # numItems
+    0 # numActors
+    1 # numEnemies
+    Balrog
+        balrog
+        "Balrog of Morgoth"
+        "The balrog is enormous! He breathes fire and ash and whips his long tail."
+        100  # hp
+        30   # damage
+        0.8  # hitRate
+
+Room
+    freedom
+    "sunny morning on the eastern slopes of Caradhras. Freedom"
+    0 # numItems
+    0 # numActors
+    0 # numEnemies
+
+38 # Number of exits
+
+Door
+    "wooden door"
+    "It looks like the door has seen better days."
+    west
+    darkCave
+    openSpace
+
+Door
+    "steel lattice door"
+    "The steel lattice door was probably used to keep orcs out in the dark ages."
+    north
+    darkCave
+    hallway
+
+Door
+    "wooden door"
+    "It looks like the door has seen better days."
+    east
+    openSpace
+    darkCave
+
+Door
+    "stone door"
+    "The door has fine ornaments chiseled out of the stone."
+    north
+    openSpace
+    forge
+
+Door
+    "dark tunnel"
+    "The tunnel is dark, but you can see light at the end of it."
+    west
+    openSpace
+    threewayLedge
+
+Door
+    "dark tunnel"
+    "The tunnel is dark, but you can see light at the end of it."
+    east
+    threewayLedge
+    openSpace
+
+Door
+    "small door"
+    "The door is small, but you should be able to squeeze through."
+    north
+    threewayLedge
+    workshop
+
+Door
+    "steel door"
+    "The steel on the door has rusted."
+    west
+    threewayLedge
+    silverRefinery
+
+Door
+    "steel door"
+    "The steel on the door has rusted."
+    east
+    silverRefinery
+    threewayLedge
+
+Door
+    "steel lattice door"
+    "The steel lattice door was probably used to keep orcs out in the dark ages."
+    south
+    hallway
+    darkCave
+
+NocturnalDoor
+    "door with silver markings"
+    "It's some form of elvish. You can't read it."
+    north
+    hallway
+    tomb
+
+Door
+    "stone door"
+    "The door has fine ornaments chiseled out of the stone."
+    south
+    forge
+    openSpace
+
+LockedDoor
+    "locked door"
+    "The door is locked with a silver lock."
+    north
+    forge
+    shed
+    silverKey # keyItemId
+
+Door
+    "small door"
+    "The door is small, but you should be able to squeeze through."
+    south
+    workshop
+    threewayLedge
+
+Door
+    "large opening"
+    "A gust of foul wind comes through it."
+    west
+    workshop
+    twowayLedge
+
+Portal
+    "suspicious door"
+    "It has some kind of magic markings on it. It doesn't look good."
+    north
+    workshop
+    3 # numDestinationIds
+    tomb
+    hallway
+    openSpace
+
+Door
+    "large opening"
+    "A gust of foul wind comes through it."
+    east
+    twowayLedge
+    workshop
+
+Door
+    "strange hatch"
+    "The hatch glowing slightly. Something isn't right."
+    north
+    twowayLedge
+    holdingRoom
+
+Door
+    "small opening"
+    "The opening is some kind of service tunnel."
+    south
+    tomb
+    hallway
+
+Door
+    "engraved door"
+    "The language is that of Mordor."
+    north
+    tomb
+    treasureKeep
+
+Door
+    "withering door"
+    "The door seems to have seen better days."
+    south
+    shed
+    forge
+
+Door
+    "hallway"
+    "It slopes slightly downwards into the mines."
+    south
+    mithrilRefinery
+    workshop
+
+Door
+    "ominous door"
+    "There's something not right about this door."
+    west
+    mithrilRefinery
+    holdingRoom
+
+Door
+    "smelly opening"
+    "An orc may have dies here."
+    north
+    mithrilRefinery
+    swamp
+
+Door
+    "engraved door"
+    "The language is that of Mordor."
+    south
+    treasureKeep
+    tomb
+
+Door
+    "unhinged door"
+    "Probably someone fought hard here long ago."
+    west
+    treasureKeep
+    platform
+
+Door
+    "unhinged door"
+    "Probably someone fought hard here long ago."
+    east
+    platform
+    treasureKeep
+
+Bridge
+    "small bridge"
+    "The bridge looks quite steady, but there's a 5 % chance that you will fall to your death."
+    west
+    platform
+    swamp
+    0.95 # stability
+
+Bridge
+    "small bridge"
+    "The bridge looks quite steady, but there's a 5 % chance that you will fall to your death."
+    east
+    swamp
+    platform
+    0.95 # stability
+
+LockedDoor
+    "locked door"
+    "The lock on the door is made of solid gold."
+    west
+    swamp
+    bigLedge
+    goldKey # keyItemId
+
+Door
+    "smelly opening"
+    "An orc may have dies here, or something worse."
+    south
+    swamp
+    mithrilRefinery
+
+Door
+    "cave opening"
+    "The sides of the opening are smooth."
+    east
+    bigLedge
+    swamp
+
+Door
+    "giant gate"
+    "Beyond the gates you hear breathing sounds as if they came from a furnace."
+    west
+    bigLedge
+    bridge
+
+Door
+    "giant gate"
+    "The gates are black from the Balrog's smoke."
+    east
+    bridge
+    bigLedge
+
+HiddenDoor
+    "hidden door"
+    "The door is invisible to the naked eye, but it's possible to go through it."
+    west
+    twowayLedge
+    cookingPlace
+
+Door
+    "narrow door"
+    "Door has no handle, but you can push it open."
+    east
+    cookingPlace
+    twowayLedge
+
+Door
+    "square gate"
+    "Beyond the gate your hear the winds of freedom beyond the mines."
+    north
+    bridge
+    freedom
+
+Door
+    "square gate"
+    "Beyond the gate is the memories of your adventure."
+    south
+    freedom
+    bridge
+
+# The player
+Player
+    100
+    darkCave
